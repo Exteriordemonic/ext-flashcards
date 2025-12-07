@@ -66,21 +66,43 @@ class URLMatcher {
         }
       }
 
-      // Wildcard path match (e.g., "example.com/*")
+      // Wildcard path match (e.g., "example.com/*" or "https://example.com/*")
       if (normalizedPattern.endsWith('/*')) {
         const base = normalizedPattern.slice(0, -2);
-        if (urlObj.hostname === base || urlObj.host === base) {
+        // Check if base matches hostname, host, or origin
+        if (urlObj.hostname === base || urlObj.host === base || urlObj.origin === base) {
           return true;
+        }
+        // Also check if base is a URL and extract origin from it
+        try {
+          const baseUrlObj = new URL(base);
+          if (urlObj.origin === baseUrlObj.origin) {
+            return true;
+          }
+        } catch {
+          // Base is not a valid URL, continue with other checks
         }
       }
 
-      // Full wildcard pattern (e.g., "example.com/path/*")
+      // Full wildcard pattern (e.g., "example.com/path/*" or "https://example.com/path/*")
       if (normalizedPattern.includes('/*')) {
         const [base, pathPattern] = normalizedPattern.split('/*');
-        if (urlObj.hostname === base || urlObj.host === base) {
+        // Check if base matches hostname, host, or origin
+        if (urlObj.hostname === base || urlObj.host === base || urlObj.origin === base) {
           if (!pathPattern || urlObj.pathname.startsWith(pathPattern)) {
             return true;
           }
+        }
+        // Also check if base is a URL and extract origin from it
+        try {
+          const baseUrlObj = new URL(base);
+          if (urlObj.origin === baseUrlObj.origin) {
+            if (!pathPattern || urlObj.pathname.startsWith(pathPattern)) {
+              return true;
+            }
+          }
+        } catch {
+          // Base is not a valid URL, continue with other checks
         }
       }
 
