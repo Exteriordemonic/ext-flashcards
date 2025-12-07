@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Overlay Settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1>Flashcard Overlay</h1>
+    </header>
+
+    <main class="popup-content">
+      <!-- Progress Section -->
+      <section class="popup-section">
+        <h2>Progress</h2>
+        <div class="progress-stats" id="progress-stats">
+          <div class="stat-item">
+            <span class="stat-label">Completed:</span>
+            <span class="stat-value" id="stat-completed">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Total:</span>
+            <span class="stat-value" id="stat-total">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Progress:</span>
+            <span class="stat-value" id="stat-progress">0%</span>
+          </div>
+        </div>
+        <button class="popup-btn popup-btn-secondary" id="reset-progress-btn">Reset Progress</button>
+      </section>
+
+      <!-- Excluded Pages Section -->
+      <section class="popup-section">
+        <h2>Excluded Pages</h2>
+        <div class="excluded-pages-list" id="excluded-pages-list">
+          <p class="empty-message">No pages excluded</p>
+        </div>
+        <button class="popup-btn popup-btn-primary" id="exclude-current-btn">Exclude Current Page</button>
+      </section>
+
+      <!-- Algorithm Settings Section -->
+      <section class="popup-section">
+        <h2>Algorithm Settings</h2>
+        <div class="algorithm-settings" id="algorithm-settings">
+          <div class="setting-item">
+            <label for="base-ease">Base Ease</label>
+            <div class="setting-control">
+              <input type="number" id="base-ease" min="130" value="250">
+              <button class="reset-btn" data-setting="baseEase">↻</button>
+            </div>
+            <small>minimum = 130, preferably approximately 250</small>
+          </div>
+
+          <div class="setting-item">
+            <label for="interval-change-hard">Interval Change (Hard)</label>
+            <div class="setting-control">
+              <input type="range" id="interval-change-hard" min="0" max="100" value="50">
+              <span class="range-value" id="interval-change-hard-value">50</span>
+              <button class="reset-btn" data-setting="intervalChangeHard">↻</button>
+            </div>
+            <small>newInterval = oldInterval * intervalChange / 100</small>
+          </div>
+
+          <div class="setting-item">
+            <label for="easy-bonus">Easy Bonus</label>
+            <div class="setting-control">
+              <input type="number" id="easy-bonus" min="100" value="130">
+              <button class="reset-btn" data-setting="easyBonus">↻</button>
+            </div>
+            <small>minimum = 100%</small>
+          </div>
+
+          <div class="setting-item">
+            <label for="load-balancer">Enable Load Balancer</label>
+            <div class="setting-control">
+              <label class="toggle-switch">
+                <input type="checkbox" id="load-balancer" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+            <small>Slightly tweaks intervals for consistent daily reviews</small>
+          </div>
+
+          <div class="setting-item">
+            <label for="max-interval">Maximum Interval (days)</label>
+            <div class="setting-control">
+              <input type="number" id="max-interval" min="1" value="36525">
+              <button class="reset-btn" data-setting="maxIntervalDays">↻</button>
+            </div>
+            <small>default = 100 years</small>
+          </div>
+
+          <div class="setting-item">
+            <label for="max-link-contribution">Maximum Link Contribution</label>
+            <div class="setting-control">
+              <input type="range" id="max-link-contribution" min="0" max="100" value="50">
+              <span class="range-value" id="max-link-contribution-value">50</span>
+              <button class="reset-btn" data-setting="maxLinkContribution">↻</button>
+            </div>
+            <small>Maximum contribution of weighted ease of linked notes</small>
+          </div>
+
+          <div class="setting-item">
+            <label for="stop-duration">Stop Duration (minutes)</label>
+            <div class="setting-control">
+              <input type="number" id="stop-duration" min="1" value="10">
+              <button class="reset-btn" data-setting="stopDuration">↻</button>
+            </div>
+            <small>Duration to stop showing flashcards when "Stop for X min" is clicked</small>
+          </div>
+        </div>
+        <button class="popup-btn popup-btn-primary" id="save-settings-btn">Save Settings</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+

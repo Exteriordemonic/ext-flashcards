@@ -1,0 +1,804 @@
+{
+    "flashcards": [
+      {
+        "id": "fc-001",
+        "question": "Jakie słowo kluczowe służy do deklarowania funkcji?",
+        "answer": "def",
+        "tags": [
+          "syntax",
+          "functions"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348640"
+      },
+      {
+        "id": "fc-002",
+        "question": "Jakie słowo kluczowe służy do deklarowania klasy?",
+        "answer": "class",
+        "tags": [
+          "syntax",
+          "oop"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348654"
+      },
+      {
+        "id": "fc-003",
+        "question": "Jaki typ jeśli chcemy określić zmienną która nie powinna być już później zmieniana?",
+        "answer": "Final",
+        "tags": [
+          "type-hints",
+          "immutable"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348656"
+      },
+      {
+        "id": "fc-004",
+        "question": "W czym przekazywane są zmienne w closure?",
+        "answer": "cell object",
+        "tags": [
+          "closures",
+          "scope"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348658"
+      },
+      {
+        "id": "fc-005",
+        "question": "Jaka dunder metoda inicjalizuje obiekt?",
+        "answer": "__init__",
+        "tags": [
+          "dunder-methods",
+          "oop"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348661"
+      },
+      {
+        "id": "fc-006",
+        "question": "Jaka dunder metoda zwraca string reprezentację dla developera?",
+        "answer": "__repr__",
+        "tags": [
+          "dunder-methods",
+          "strings"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348698"
+      },
+      {
+        "id": "fc-007",
+        "question": "Jaka dunder metoda zwraca czytany string dla użytkownika?",
+        "answer": "__str__",
+        "tags": [
+          "dunder-methods",
+          "strings"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348702"
+      },
+      {
+        "id": "fc-008",
+        "question": "Jaka dunder metoda definiuje zachowanie operatora ==?",
+        "answer": "__eq__",
+        "tags": [
+          "dunder-methods",
+          "comparison"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348704"
+      },
+      {
+        "id": "fc-009",
+        "question": "Jaka dunder metoda definiuje zachowanie operatora <?",
+        "answer": "__lt__",
+        "tags": [
+          "dunder-methods",
+          "comparison"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348707"
+      },
+      {
+        "id": "fc-010",
+        "question": "Jaka dunder metoda jest wywoływana przed usunięciem obiektu?",
+        "answer": "__del__",
+        "tags": [
+          "dunder-methods",
+          "lifecycle"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348709"
+      },
+      {
+        "id": "fc-011",
+        "question": "Co robi metoda list.append()?",
+        "answer": "Dodaje jeden element na koniec listy",
+        "tags": [
+          "list-methods",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348712"
+      },
+      {
+        "id": "fc-012",
+        "question": "Co robi metoda list.extend()?",
+        "answer": "Dodaje wszystkie elementy z iterable na koniec listy",
+        "tags": [
+          "list-methods",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348714"
+      },
+      {
+        "id": "fc-013",
+        "question": "Co robi metoda list.insert(index, element)?",
+        "answer": "Wstawia element na określonym indeksie",
+        "tags": [
+          "list-methods",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348716"
+      },
+      {
+        "id": "fc-014",
+        "question": "Co robi metoda list.pop()?",
+        "answer": "Usuwa i zwraca ostatni element z listy",
+        "tags": [
+          "list-methods",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348719"
+      },
+      {
+        "id": "fc-015",
+        "question": "Co robi metoda list.remove()?",
+        "answer": "Usuwa pierwszy element o podanej wartości",
+        "tags": [
+          "list-methods",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348721"
+      },
+      {
+        "id": "fc-016",
+        "question": "Jaka operator służy do indeksowania od końca listy?",
+        "answer": "Ujemny indeks, np. lista[-1] to ostatni element",
+        "tags": [
+          "list-indexing",
+          "slicing"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348723"
+      },
+      {
+        "id": "fc-017",
+        "question": "Co zwraca wyrażenie lista[1:4]?",
+        "answer": "Elementy od indeksu 1 do 3 (bez 4)",
+        "tags": [
+          "slicing",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348725"
+      },
+      {
+        "id": "fc-018",
+        "question": "Co zwraca wyrażenie lista[::-1]?",
+        "answer": "Odwróconą listę",
+        "tags": [
+          "slicing",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348728"
+      },
+      {
+        "id": "fc-019",
+        "question": "Co robi metoda str.upper()?",
+        "answer": "Zwraca string ze wszystkimi wielkimi literami",
+        "tags": [
+          "string-methods",
+          "strings"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348730"
+      },
+      {
+        "id": "fc-020",
+        "question": "Co robi metoda str.lower()?",
+        "answer": "Zwraca string ze wszystkimi małymi literami",
+        "tags": [
+          "string-methods",
+          "strings"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348733"
+      },
+      {
+        "id": "fc-021",
+        "question": "Co robi metoda str.strip()?",
+        "answer": "Usuwa białe znaki z początku i końca stringa",
+        "tags": [
+          "string-methods",
+          "strings"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348735"
+      },
+      {
+        "id": "fc-022",
+        "question": "Co robi metoda str.replace(old, new)?",
+        "answer": "Zamienia wszystkie wystąpienia old na new",
+        "tags": [
+          "string-methods",
+          "strings"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348737"
+      },
+      {
+        "id": "fc-023",
+        "question": "Co robi metoda str.split()?",
+        "answer": "Dzieli string na listę po białych znakach",
+        "tags": [
+          "string-methods",
+          "strings"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348739"
+      },
+      {
+        "id": "fc-024",
+        "question": "Co robi metoda str.join(iterable)?",
+        "answer": "Łączy elementy iterable w jeden string z separatorem",
+        "tags": [
+          "string-methods",
+          "strings"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348742"
+      },
+      {
+        "id": "fc-025",
+        "question": "Co zwraca metoda str.startswith()?",
+        "answer": "True jeśli string zaczyna się od podanego ciągu",
+        "tags": [
+          "string-methods",
+          "strings"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348744"
+      },
+      {
+        "id": "fc-026",
+        "question": "Co zwraca metoda str.endswith()?",
+        "answer": "True jeśli string kończy się na podanym ciągu",
+        "tags": [
+          "string-methods",
+          "strings"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348747"
+      },
+      {
+        "id": "fc-027",
+        "question": "Jak formatować string z wartościami zmiennych?",
+        "answer": "f-string: f'text {variable} more'",
+        "tags": [
+          "string-formatting",
+          "strings"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348749"
+      },
+      {
+        "id": "fc-028",
+        "question": "Jak sformatować f-string do 2 miejsc po przecinku?",
+        "answer": "f'{value:.2f}'",
+        "tags": [
+          "string-formatting",
+          "strings"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348751"
+      },
+      {
+        "id": "fc-029",
+        "question": "Co robi metoda dict.keys()?",
+        "answer": "Zwraca widok wszystkich kluczy słownika",
+        "tags": [
+          "dict-methods",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348754"
+      },
+      {
+        "id": "fc-030",
+        "question": "Co robi metoda dict.values()?",
+        "answer": "Zwraca widok wszystkich wartości słownika",
+        "tags": [
+          "dict-methods",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348756"
+      },
+      {
+        "id": "fc-031",
+        "question": "Co robi metoda dict.items()?",
+        "answer": "Zwraca widok par (klucz, wartość) słownika",
+        "tags": [
+          "dict-methods",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348758"
+      },
+      {
+        "id": "fc-032",
+        "question": "Co robi metoda dict.get(key)?",
+        "answer": "Zwraca wartość dla klucza lub None jeśli nie istnieje",
+        "tags": [
+          "dict-methods",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348761"
+      },
+      {
+        "id": "fc-033",
+        "question": "Co robi metoda set.add()?",
+        "answer": "Dodaje element do zbioru",
+        "tags": [
+          "set-methods",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348763"
+      },
+      {
+        "id": "fc-034",
+        "question": "Co robi metoda set.remove()?",
+        "answer": "Usuwa element ze zbioru, błąd jeśli nie istnieje",
+        "tags": [
+          "set-methods",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348766"
+      },
+      {
+        "id": "fc-035",
+        "question": "Co robi metoda set.discard()?",
+        "answer": "Usuwa element ze zbioru, brak błędu jeśli nie istnieje",
+        "tags": [
+          "set-methods",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348768"
+      },
+      {
+        "id": "fc-036",
+        "question": "Co robi operacja set1.union(set2)?",
+        "answer": "Zwraca nowy zbiór z elementami z obu zbiorów",
+        "tags": [
+          "set-operations",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348770"
+      },
+      {
+        "id": "fc-037",
+        "question": "Co robi operacja set1.intersection(set2)?",
+        "answer": "Zwraca nowy zbiór z wspólnymi elementami",
+        "tags": [
+          "set-operations",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348773"
+      },
+      {
+        "id": "fc-038",
+        "question": "Co robi operacja set1.difference(set2)?",
+        "answer": "Zwraca nowy zbiór z elementami z set1 które nie są w set2",
+        "tags": [
+          "set-operations",
+          "data-structures"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348775"
+      },
+      {
+        "id": "fc-039",
+        "question": "Jaki operator zamiast set.union()?",
+        "answer": "set1 | set2",
+        "tags": [
+          "set-operations",
+          "operators"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348777"
+      },
+      {
+        "id": "fc-040",
+        "question": "Jaki operator zamiast set.intersection()?",
+        "answer": "set1 & set2",
+        "tags": [
+          "set-operations",
+          "operators"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348779"
+      },
+      {
+        "id": "fc-041",
+        "question": "Jaki typ reprezentuje wartość logiczną True/False?",
+        "answer": "bool",
+        "tags": [
+          "data-types",
+          "boolean"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348782"
+      },
+      {
+        "id": "fc-042",
+        "question": "Które wartości są falsy w Pythonie?",
+        "answer": "False, 0, 0.0, '', [], {}, set(), None",
+        "tags": [
+          "boolean",
+          "data-types"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348784"
+      },
+      {
+        "id": "fc-043",
+        "question": "Co zwraca bool(1)?",
+        "answer": "True",
+        "tags": [
+          "boolean",
+          "data-types"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348786"
+      },
+      {
+        "id": "fc-044",
+        "question": "Co zwraca bool([])?",
+        "answer": "False",
+        "tags": [
+          "boolean",
+          "data-types"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348789"
+      },
+      {
+        "id": "fc-045",
+        "question": "Jaki typ hint dla funkcji bez parametrów zwracającej str?",
+        "answer": "def func() -> str:",
+        "tags": [
+          "type-hints",
+          "functions"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348791"
+      },
+      {
+        "id": "fc-046",
+        "question": "Jaki typ hint dla parametru który może być str lub int?",
+        "answer": "Union[str, int] lub str | int (Python 3.10+)",
+        "tags": [
+          "type-hints",
+          "typing"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348793"
+      },
+      {
+        "id": "fc-047",
+        "question": "Jaki typ hint dla zmiennej która może być None?",
+        "answer": "Optional[type] lub type | None",
+        "tags": [
+          "type-hints",
+          "typing"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348796"
+      },
+      {
+        "id": "fc-048",
+        "question": "Jaki typ hint dla listy stringów?",
+        "answer": "list[str] lub List[str]",
+        "tags": [
+          "type-hints",
+          "typing"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348798"
+      },
+      {
+        "id": "fc-049",
+        "question": "Jaki typ hint dla słownika ze stringami i int?",
+        "answer": "dict[str, int] lub Dict[str, int]",
+        "tags": [
+          "type-hints",
+          "typing"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348801"
+      },
+      {
+        "id": "fc-050",
+        "question": "Jaki typ hint dla funkcji callback'u?",
+        "answer": "Callable[[ArgType], ReturnType]",
+        "tags": [
+          "type-hints",
+          "functions"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348803"
+      },
+      {
+        "id": "fc-051",
+        "question": "Jaki operator używa się do łańcuchowych porównań?",
+        "answer": "5 < x <= 10",
+        "tags": [
+          "operators",
+          "comparison"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348805"
+      },
+      {
+        "id": "fc-052",
+        "question": "Ile razy wykonuje się operand w wyrażeniu: 5 < 10 < 15?",
+        "answer": "Każdy operand wykonuje się raz, to: (5 < 10) and (10 < 15)",
+        "tags": [
+          "operators",
+          "comparison"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348808"
+      },
+      {
+        "id": "fc-053",
+        "question": "Jaki operator zwraca True jeśli conajmniej jedno warunki jest True?",
+        "answer": "or",
+        "tags": [
+          "operators",
+          "boolean"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348810"
+      },
+      {
+        "id": "fc-054",
+        "question": "Jaki operator zwraca True tylko jeśli oba warunki są True?",
+        "answer": "and",
+        "tags": [
+          "operators",
+          "boolean"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348813"
+      },
+      {
+        "id": "fc-055",
+        "question": "Co robi operacja 2 ** 3?",
+        "answer": "Podnosi 2 do potęgi 3, wynik: 8",
+        "tags": [
+          "operators",
+          "arithmetic"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348815"
+      },
+      {
+        "id": "fc-056",
+        "question": "Co robi operacja 10 // 3?",
+        "answer": "Całkowite dzielenie, wynik: 3",
+        "tags": [
+          "operators",
+          "arithmetic"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348817"
+      },
+      {
+        "id": "fc-057",
+        "question": "Co robi operacja 10 % 3?",
+        "answer": "Zwraca resztę z dzielenia, wynik: 1",
+        "tags": [
+          "operators",
+          "arithmetic"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348820"
+      },
+      {
+        "id": "fc-058",
+        "question": "Jakie słowo kluczowe użyć do anonimowej funkcji?",
+        "answer": "lambda",
+        "tags": [
+          "functions",
+          "syntax"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348822"
+      },
+      {
+        "id": "fc-059",
+        "question": "Jak wygląda składnia lambda z parametrem?",
+        "answer": "lambda x: x + 1",
+        "tags": [
+          "functions",
+          "syntax"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348824"
+      },
+      {
+        "id": "fc-060",
+        "question": "Jakie słowo kluczowe użyć dla generator funkcji?",
+        "answer": "yield",
+        "tags": [
+          "generators",
+          "syntax"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348826"
+      },
+      {
+        "id": "fc-061",
+        "question": "Jaka jest główna różnica między return a yield?",
+        "answer": "return kończy funkcję, yield wznawia od następnego punktu",
+        "tags": [
+          "generators",
+          "functions"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348829"
+      },
+      {
+        "id": "fc-062",
+        "question": "Co zwraca funkcja z yield?",
+        "answer": "Generator object",
+        "tags": [
+          "generators",
+          "data-types"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348831"
+      },
+      {
+        "id": "fc-063",
+        "question": "Jaki operator sprawdza tożsamość obiektu?",
+        "answer": "is",
+        "tags": [
+          "operators",
+          "identity"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348833"
+      },
+      {
+        "id": "fc-064",
+        "question": "Jaka jest różnica między == a is?",
+        "answer": "== porównuje wartość, is porównuje czy to ten sam obiekt",
+        "tags": [
+          "operators",
+          "comparison"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348835"
+      },
+      {
+        "id": "fc-065",
+        "question": "Jaki operator sprawdza czy element jest w kolekcji?",
+        "answer": "in",
+        "tags": [
+          "operators",
+          "membership"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348838"
+      },
+      {
+        "id": "fc-066",
+        "question": "Co zwraca wyrażenie 5 in [1, 2, 5]?",
+        "answer": "True",
+        "tags": [
+          "operators",
+          "membership"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348842"
+      },
+      {
+        "id": "fc-067",
+        "question": "Jakie słowo kluczowe zmienia zakres zmiennej na nonlocal?",
+        "answer": "nonlocal",
+        "tags": [
+          "scope",
+          "keywords"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348845"
+      },
+      {
+        "id": "fc-068",
+        "question": "Jakie słowo kluczowe zmienia zmienną na globalną?",
+        "answer": "global",
+        "tags": [
+          "scope",
+          "keywords"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348847"
+      },
+      {
+        "id": "fc-069",
+        "question": "Jaka dunder metoda definiuje zachowanie operatora +?",
+        "answer": "__add__",
+        "tags": [
+          "dunder-methods",
+          "operators"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348850"
+      },
+      {
+        "id": "fc-070",
+        "question": "Jaka dunder metoda definiuje zachowanie operatora -?",
+        "answer": "__sub__",
+        "tags": [
+          "dunder-methods",
+          "operators"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348852"
+      },
+      {
+        "id": "fc-071",
+        "question": "Jaka dunder metoda definiuje zachowanie operatora *?",
+        "answer": "__mul__",
+        "tags": [
+          "dunder-methods",
+          "operators"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348854"
+      },
+      {
+        "id": "fc-072",
+        "question": "Jaka dunder metoda definiuje zachowanie operatora /?",
+        "answer": "__truediv__",
+        "tags": [
+          "dunder-methods",
+          "operators"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348856"
+      },
+      {
+        "id": "fc-073",
+        "question": "Jaka dunder metoda definiuje zachowanie operatora []?",
+        "answer": "__getitem__",
+        "tags": [
+          "dunder-methods",
+          "indexing"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348858"
+      },
+      {
+        "id": "fc-074",
+        "question": "Jaka dunder metoda zwraca długość obiektu?",
+        "answer": "__len__",
+        "tags": [
+          "dunder-methods",
+          "sequences"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348860"
+      },
+      {
+        "id": "fc-075",
+        "question": "Jaka dunder metoda definiuje zachowanie iteracji po obiekcie?",
+        "answer": "__iter__",
+        "tags": [
+          "dunder-methods",
+          "iteration"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348863"
+      },
+      {
+        "id": "fc-076",
+        "question": "Jaka dunder metoda zwraca następny element w iteracji?",
+        "answer": "__next__",
+        "tags": [
+          "dunder-methods",
+          "iteration"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348865"
+      },
+      {
+        "id": "fc-077",
+        "question": "Co robi int() na stringu?",
+        "answer": "Konwertuje string na liczbę całkowitą",
+        "tags": [
+          "type-conversion",
+          "built-ins"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348867"
+      },
+      {
+        "id": "fc-078",
+        "question": "Co robi float() na stringu?",
+        "answer": "Konwertuje string na liczbę zmiennoprzecinkową",
+        "tags": [
+          "type-conversion",
+          "built-ins"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348870"
+      },
+      {
+        "id": "fc-079",
+        "question": "Co robi str() na liczbie?",
+        "answer": "Konwertuje liczbę na string",
+        "tags": [
+          "type-conversion",
+          "built-ins"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348872"
+      },
+      {
+        "id": "fc-080",
+        "question": "Co robi list() na stringu?",
+        "answer": "Konwertuje string na listę znaków",
+        "tags": [
+          "type-conversion",
+          "built-ins"
+        ],
+        "createdAt": "2025-12-07T18:30:56.348874"
+      }
+    ]
+  }

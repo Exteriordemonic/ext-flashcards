@@ -1,0 +1,25 @@
+{
+  "name": "ext-flashcards",
+  "version": "1.0.0",
+  "description": "Chrome extension for educational flashcards with spaced repetition",
+  "type": "module",
+  "scripts": {
+    "test": "bun test",
+    "lint": "bun run lint:check",
+    "lint:check": "echo 'Linting not configured yet'",
+    "build": "echo 'No build step required for vanilla JS extension'"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "bun-types": "latest"
+  },
+  "keywords": [
+    "chrome-extension",
+    "flashcards",
+    "spaced-repetition",
+    "education"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+

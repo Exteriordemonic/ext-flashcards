@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Flashcard Overlay",
+  "version": "1.0.0",
+  "description": "Educational flashcards with spaced repetition algorithm displayed as overlays on web pages",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/content.js"],
+      "css": [
+        "src/ui/overlay.css",
+        "src/ui/control-panel.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Flashcard Overlay Settings"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/data/flashcards.json",
+        "src/core/storage.js",
+        "src/core/algorithm.js",
+        "src/core/scheduler.js",
+        "src/core/flashcards.js",
+        "src/utils/constants.js",
+        "src/utils/url-matcher.js",
+        "src/content/overlay.js",
+        "src/content/control-panel.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
+

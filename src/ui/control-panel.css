@@ -1,0 +1,175 @@
+/* Control Panel Styles - Dark Theme */
+
+.flashcard-control-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 280px;
+  background: linear-gradient(135deg, #1e1e2e 0%, #2a2a3e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  z-index: 999998;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.flashcard-control-panel.minimized {
+  width: auto;
+  min-width: 120px;
+}
+
+.control-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: move;
+  user-select: none;
+}
+
+.control-panel-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.control-panel-minimize {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  padding: 0;
+  line-height: 1;
+}
+
+.control-panel-minimize:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.control-panel-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flashcard-control-panel.minimized .control-panel-content {
+  display: none;
+}
+
+.control-panel-progress {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.control-panel-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control-panel-toggle-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.control-panel-toggle-switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background-color: #4a4a5e;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.control-panel-toggle-switch::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.control-panel-toggle-switch.active {
+  background-color: #8b5cf6; /* Purple accent color */
+}
+
+.control-panel-toggle-switch.active::before {
+  transform: translateX(20px);
+}
+
+.control-panel-btn {
+  width: 100%;
+  padding: 10px 16px;
+  background-color: #8b5cf6; /* Purple accent color */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-panel-btn:hover {
+  background-color: #9b6cf6;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.control-panel-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flashcard-control-panel {
+    width: 240px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* Animation for panel appearance */
+@keyframes panelSlideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.flashcard-control-panel {
+  animation: panelSlideIn 0.3s ease-out;
+}
+

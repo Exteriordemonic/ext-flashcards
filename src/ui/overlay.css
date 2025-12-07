@@ -1,0 +1,257 @@
+/* Flashcard Overlay Styles - Dark Theme */
+
+.flashcard-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.flashcard-overlay-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.flashcard-overlay-container {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Card Styles */
+.flashcard-card-wrapper {
+  perspective: 1000px;
+  width: 100%;
+  min-height: 300px;
+}
+
+.flashcard-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+  cursor: pointer;
+}
+
+.flashcard-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #1e1e2e 0%, #2a2a3e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #2a2a3e 0%, #1e1e2e 100%);
+}
+
+.flashcard-question,
+.flashcard-answer {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.flashcard-question {
+  font-weight: 600;
+}
+
+.flashcard-answer {
+  font-weight: 400;
+}
+
+/* Controls */
+.flashcard-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.flashcard-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #3a3a4e;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.flashcard-btn-label {
+  font-weight: 500;
+}
+
+.flashcard-btn-time {
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.flashcard-btn:hover {
+  background-color: #4a4a5e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.flashcard-btn:active {
+  transform: translateY(0);
+}
+
+.flashcard-btn-close {
+  background-color: #4a4a5e;
+  min-width: 120px;
+}
+
+.flashcard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.flashcard-btn-hard {
+  background-color: #8b5a3c;
+}
+
+.flashcard-btn-hard:hover {
+  background-color: #9b6a4c;
+}
+
+.flashcard-btn-good {
+  background-color: #4a7c59;
+}
+
+.flashcard-btn-good:hover {
+  background-color: #5a8c69;
+}
+
+.flashcard-btn-easy {
+  background-color: #6b8e5a;
+}
+
+.flashcard-btn-easy:hover {
+  background-color: #7b9e6a;
+}
+
+.flashcard-btn-later {
+  background-color: #7a6a8e;
+}
+
+.flashcard-btn-later:hover {
+  background-color: #8a7a9e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flashcard-overlay-container {
+    width: 95%;
+    max-height: 85vh;
+  }
+
+  .flashcard-card-wrapper {
+    min-height: 250px;
+  }
+
+  .flashcard-front,
+  .flashcard-back {
+    padding: 20px;
+  }
+
+  .flashcard-question,
+  .flashcard-answer {
+    font-size: 16px;
+    max-height: 300px;
+  }
+
+  .flashcard-actions {
+    flex-direction: column;
+  }
+
+  .flashcard-btn {
+    width: 100%;
+  }
+}
+
+/* Animation for overlay appearance */
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.flashcard-overlay {
+  animation: overlayFadeIn 0.3s ease-out;
+}
+
+/* Scrollbar styling for card content */
+.flashcard-question::-webkit-scrollbar,
+.flashcard-answer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.flashcard-question::-webkit-scrollbar-track,
+.flashcard-answer::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.flashcard-question::-webkit-scrollbar-thumb,
+.flashcard-answer::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.flashcard-question::-webkit-scrollbar-thumb:hover,
+.flashcard-answer::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
