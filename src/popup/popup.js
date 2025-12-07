@@ -199,11 +199,48 @@ async function init() {
   document.getElementById('exclude-current-btn').addEventListener('click', async () => {
     const tab = await getCurrentTab();
     if (tab && tab.url) {
-      const excludedPages = await getStorage(STORAGE_KEYS.EXCLUDED_PAGES, []);
-      if (!excludedPages.includes(tab.url)) {
-        excludedPages.push(tab.url);
-        await setStorage(STORAGE_KEYS.EXCLUDED_PAGES, excludedPages);
-        await loadExcludedPages();
+      try {
+        const urlObj = new URL(tab.url);
+        const origin = urlObj.origin; // np. "https://example.com"
+        const wildcardPattern = `${origin}/*`; // np. "https://example.com/*"
+        
+        const excludedPages = await getStorage(STORAGE_KEYS.EXCLUDED_PAGES, []);
+        
+        // Sprawdź czy wzorzec już istnieje
+        if (!excludedPages.includes(wildcardPattern)) {
+          // Usuń istniejące dokładne URL z tej samej domeny oraz inne wildcard dla tej domeny
+          const filteredPages = excludedPages.filter(page => {
+            try {
+              const pageUrlObj = new URL(page);
+              return pageUrlObj.origin !== origin;
+            } catch {
+              // Jeśli nie jest to pełny URL, sprawdź czy to nie jest już wildcard dla tej domeny
+              if (page.endsWith('/*')) {
+                const base = page.slice(0, -2);
+                try {
+                  const baseUrlObj = new URL(base);
+                  return baseUrlObj.origin !== origin;
+                } catch {
+                  return true; // Zachowaj jeśli nie można sparsować
+                }
+              }
+              return true; // Zachowaj inne wzorce
+            }
+          });
+          
+          filteredPages.push(wildcardPattern);
+          await setStorage(STORAGE_KEYS.EXCLUDED_PAGES, filteredPages);
+          await loadExcludedPages();
+        }
+      } catch (error) {
+        console.error('Error excluding domain:', error);
+        // Fallback do starego zachowania dla nieprawidłowych URL (np. chrome://, file://)
+        const excludedPages = await getStorage(STORAGE_KEYS.EXCLUDED_PAGES, []);
+        if (!excludedPages.includes(tab.url)) {
+          excludedPages.push(tab.url);
+          await setStorage(STORAGE_KEYS.EXCLUDED_PAGES, excludedPages);
+          await loadExcludedPages();
+        }
       }
     }
   });
